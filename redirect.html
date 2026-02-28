@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Redirect URI - Tesla Developer</title>
+    <script>
+      window.onload = function () {
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        if (code) {
+          document.getElementById('result').textContent =
+            'Código recibido: ' + code;
+        } else {
+          document.getElementById('result').textContent =
+            'No se recibió ningún código.';
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Redirect URI - Tesla Developer</h1>
+    <p id="result">Procesando...</p>
+  </body>
+</html>
